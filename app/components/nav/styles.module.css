@@ -1,0 +1,12 @@
+.nav {
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    height: 130px;
+    align-items: center;
+    padding-inline: 40px;
+}
+
+.nav h1 {
+    color: white
+}

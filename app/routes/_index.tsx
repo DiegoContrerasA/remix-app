@@ -1,41 +1,60 @@
 import type { MetaFunction } from "@remix-run/node";
+import Nav from "~/components/nav";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Pagina de inicio" },
+    { name: "description", content: "Esta es la pagina ...." },
   ];
 };
 
+
+
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>Welcome to Remix</h1>
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer"
-          >
-            15m Quickstart Blog Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer"
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
-        </li>
-      </ul>
-    </div>
+    <>
+      <Nav />
+      <section>
+        <nav>
+          breadcrumbs
+        </nav>
+        <div className='header'>
+          <div className='galery'>
+              <img src="/img-1.png" alt="imagen 1" />
+          </div>
+          <div className='text'>
+            <h2>NOMBRE PRODUCTO</h2>
+            <p>Fusce sapien urna, tristique non sapien nec, rutrum fringilla eros. Etiam accumsan odio eget tempus consectetur. Aliquam et sapien nulla. Suspendisse lobortis leo ante, imperdiet tristique magna tristique eu. Nullam ultrices vulputate odio, eu iaculis nulla congue quis.</p>
+            <ul>
+              <li>
+                Delivered today (order Mon-Fri before 12:00, delivery between 17:00 and 22:00)
+              </li>
+              <li>
+                Delivered today (order Mon-Fri before 12:00, delivery between 17:00 and 22:00)
+              </li>
+              <li>
+                Delivered today (order Mon-Fri before 12:00, delivery between 17:00 and 22:00)
+              </li>
+              <li>
+                Delivered today (order Mon-Fri before 12:00, delivery between 17:00 and 22:00)
+              </li>
+            </ul>
+          </div>
+          <div className='cardContainer'>
+            <div>
+              <h4>Ahora mismo un asesor
+                esta atento para resolver
+                tus dudas</h4>
+              <button>
+                Contactar asesor
+              </button>
+              <button>
+                Comprar ahora
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
